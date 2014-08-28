@@ -1,0 +1,24 @@
+{
+  "name": "bloggify-lightbox",
+  "version": "1.0.0",
+  "description": "MiniLightbox plugin for Bloggify sites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BloggifyPlugins/lightbox.git"
+  },
+  "keywords": [
+    "lightbox",
+    "minilightbox",
+    "bloggify"
+  ],
+  "author": "bizauionica@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BloggifyPlugins/lightbox/issues"
+  },
+  "homepage": "https://github.com/BloggifyPlugins/lightbox"
+}
