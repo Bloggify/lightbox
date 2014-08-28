@@ -19,7 +19,7 @@ MiniLightbox.customOpen = function () {
 
 window.onload = function () {
     MiniLightbox({
-        "selector": "img"
-      , delegation: "body"
+        "selector": ".content img"
+      , delegation: "html"
     });
 };
