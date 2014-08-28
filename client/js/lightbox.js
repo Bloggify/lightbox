@@ -11,6 +11,16 @@
         MiniLightbox.close();
     });
 
+    function matchesSelector(selector, element) {
+        var all = document.querySelectorAll(selector);
+        for (var i = 0; i < all.length; i++) {
+            if (all[i] === element) {
+                return true;
+            }
+        }
+        return false;
+    }
+
      function MiniLightbox(options) {
 
         var selector = options.selector || options
@@ -52,20 +62,25 @@
             }
           ;
 
-        for (var i = 0; i < elms.length; ++i) {
-            (function (cEl) {
-                if (options.delegation) {
-                    return document.querySelector(options.delegation).addEventListener("click", function(e) {
-                        var el = e.target;
-                        while (el && el.tagName !== 'IMG') {
-                            el = el.parentNode;
-                        }
-
-                        if (!el || el.tagName !== 'IMG' || el.parentNode.classList.contains("ml_box")) { return; }
-                        clickHandler.call(el, e);
-                    });
+        if (options.delegation) {
+            return document.querySelector(options.delegation).addEventListener("click", function(e) {
+                var el = e.target;
+                var parents = [el];
+                while (el) { parents.push(el = el.parentNode); }
+                for (var i = 0; i < parents.length; ++i) {
+                    var cPar = parents[i];
+                    if (matchesSelector(options.selector, cPar) && (el = cPar)) {
+                        break;
+                    }
                 }
 
+                if (!el || el.tagName !== 'IMG' || el.parentNode.classList.contains("ml_box")) { return; }
+                clickHandler.call(el, e);
+            });
+        }
+
+        for (var i = 0; i < elms.length; ++i) {
+            (function (cEl) {
                 cEl.addEventListener("click", clickHandler);
             })(elms[i]);
         }
