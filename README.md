@@ -1,5 +1,7 @@
-# bloggify-lightbox
+# MiniLightbox for Bloggify
 MiniLightbox plugin for Bloggify sites
+
+![](http://i.imgur.com/NeHLHgF.png)
 
 ## Installation
 Run the following commands to download and install the application:
