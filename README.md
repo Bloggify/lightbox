@@ -1,16 +1,18 @@
 # MiniLightbox for Bloggify
 MiniLightbox plugin for Bloggify sites
 
-![](http://i.imgur.com/NeHLHgF.png)
+## Configuration
 
-## Installation
-Run the following commands to download and install the application:
-
-```sh
-$ git clone git@github.com:BloggifyPlugins/lightbox.git bloggify-lightbox
-$ cd bloggify-lightbox
-$ npm install
+```js
+{
+  "name": "lightbox",
+  "source": "git@github.com:BloggifyPlugins/lightbox.git",
+  "version": "2.0.0"
+}
 ```
+
+## Screenshot
+![](http://i.imgur.com/wtlnBZz.jpg)
 
 ## How to contribute
 
