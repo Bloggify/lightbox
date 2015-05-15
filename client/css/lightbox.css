@@ -40,3 +40,8 @@ div.ml_box.animated {
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
+
+img.no-lightbox {
+    cursor: default;
+}
+
