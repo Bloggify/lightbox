@@ -74,7 +74,8 @@
                     }
                 }
 
-                if (!el || el.tagName !== 'IMG' || el.parentNode.classList.contains("ml_box")) { return; }
+
+                if (!el || el.tagName !== 'IMG' || el.parentNode.classList.contains("ml_box") || el.classList.contains("no-lightbox")) { return; }
                 clickHandler.call(el, e);
             });
         }
