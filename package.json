@@ -21,11 +21,11 @@
     "url": "https://github.com/Bloggify/lightbox/issues"
   },
   "blah": {
-      "configuration":  {
-          "name": "lightbox",
-          "source": "git@github.com:Bloggify/lightbox.git",
-          "version": "master"
-        }
+    "configuration": {
+      "name": "lightbox",
+      "source": "git@github.com:Bloggify/lightbox.git",
+      "version": "master"
+    }
   },
   "homepage": "https://github.com/Bloggify/lightbox"
 }
