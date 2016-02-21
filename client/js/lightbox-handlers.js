@@ -13,6 +13,9 @@ MiniLightbox.customClose = function () {
 };
 
 MiniLightbox.customOpen = function () {
+    if (this.el.parentElement.tagName === "A") {
+        return false;
+    }
     this.box.classList.add("animated", "fadeIn");
     this.img.classList.add("animated", "zoomIn");
 };

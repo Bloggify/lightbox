@@ -35,7 +35,9 @@
                 }
 
                 if (fCache) {
-                    MiniLightbox.open(id);
+                    if (MiniLightbox.open(id) === false) {
+                        return;
+                    }
                 } else {
                     var box = document.createElement("div");
                     box.setAttribute("class", "ml_box");
@@ -54,8 +56,11 @@
                       , opened: false
                     };
 
+                    box.style.display = "none";
                     document.body.appendChild(box);
-                    MiniLightbox.open(id);
+                    if (MiniLightbox.open(id) === false) {
+                        return;
+                    }
                 }
 
                 e.preventDefault();
@@ -101,7 +106,7 @@
         cache[id].opened = false;
 
         if (typeof MiniLightbox.customClose === "function" && MiniLightbox.customClose.call(cache[id]) === false) {
-            return;
+            return false;
         }
 
         cache[id].box.style.display = "none";
@@ -111,7 +116,7 @@
         if (cache[id].opened) { return; }
         cache[id].opened = true;
         if (typeof MiniLightbox.customOpen === "function" && MiniLightbox.customOpen.call(cache[id]) === false) {
-            return;
+            return false;
         }
         cache[id].box.style.display = "block";
     };
