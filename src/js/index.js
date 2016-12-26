@@ -1,5 +1,6 @@
-MiniLightbox.customClose = function () {
-    var self = this;
+const MiniLightbox = require("mini-lightbox");
+
+MiniLightbox.customClose = function (self) {
     self.img.classList.add("animated", "zoomOut");
     setTimeout(function () {
         self.box.classList.add("animated", "fadeOut");
@@ -12,17 +13,17 @@ MiniLightbox.customClose = function () {
     return false;
 };
 
-MiniLightbox.customOpen = function () {
-    if (this.el.parentElement.tagName === "A") {
+MiniLightbox.customOpen = function (self) {
+    if (self.el.parentElement.tagName === "A" || self.el.classList.contains("emoji-img")) {
         return false;
     }
-    this.box.classList.add("animated", "fadeIn");
-    this.img.classList.add("animated", "zoomIn");
+    self.box.classList.add("animated", "fadeIn");
+    self.img.classList.add("animated", "zoomIn");
 };
 
 window.onload = function () {
-    MiniLightbox({
-        "selector": ".content img"
+    new MiniLightbox({
+        selector: ".content img"
       , delegation: "html"
     });
 };

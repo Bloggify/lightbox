@@ -22,7 +22,6 @@ div.ml_box img {
     left: 0;
     right: 0;
     cursor: zoom-out;
-    cursor: -webkit-zoom-out;
     border-radius: 4px;
     border: 2px solid #D7D7D7;
     background: rgba(255, 255, 255, 0.88);
@@ -32,7 +31,6 @@ div.ml_box img {
 
 div.ml_box .animated,
 div.ml_box.animated {
-    -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
 }
 
@@ -41,11 +39,10 @@ div.ml_box.animated {
 }
 
 .content img {
-    cursor: -webkit-zoom-in;
     cursor: zoom-in;
 }
 
+img.emoji-img,
 img.no-lightbox {
     cursor: default;
 }
-

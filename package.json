@@ -15,17 +15,36 @@
     "minilightbox",
     "bloggify"
   ],
-  "author": "bizauionica@gmail.com",
-  "license": "KINDLY",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Bloggify/lightbox/issues"
   },
-  "blah": {
-    "configuration": {
-      "name": "lightbox",
-      "source": "git@github.com:Bloggify/lightbox.git",
-      "version": "master"
-    }
+  "blah": {},
+  "homepage": "https://github.com/Bloggify/lightbox",
+  "bloggify": {
+    "styles": [
+      "src/css/lightbox.css"
+    ],
+    "scripts": [
+      "src/js/index.js"
+    ]
   },
-  "homepage": "https://github.com/Bloggify/lightbox"
+  "dependencies": {
+    "mini-lightbox": "^3.0.0"
+  },
+  "files": [
+    "bin/",
+    "app/",
+    "public/",
+    "lib/",
+    "build/",
+    "dist/",
+    "src/",
+    "resources/",
+    "menu/",
+    "scripts/",
+    "cli.js",
+    "index.js"
+  ]
 }
