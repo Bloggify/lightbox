@@ -22,14 +22,6 @@
   },
   "blah": {},
   "homepage": "https://github.com/Bloggify/lightbox",
-  "bloggify": {
-    "styles": [
-      "src/css/lightbox.css"
-    ],
-    "scripts": [
-      "src/js/index.js"
-    ]
-  },
   "dependencies": {
     "mini-lightbox": "^3.0.1"
   },

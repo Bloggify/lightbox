@@ -1,0 +1,8 @@
+{
+    "styles": [
+        "src/css/lightbox.css"
+    ],
+    "scripts": [
+        "src/js/index.js"
+    ]
+}
