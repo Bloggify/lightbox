@@ -6,6 +6,7 @@ MiniLightbox.customClose = function (self) {
         self.box.classList.add("animated", "fadeOut");
         setTimeout(function () {
             self.box.classList.remove("animated", "fadeOut");
+            self.opened = false;
             self.img.classList.remove("animated", "zoomOut");
             self.box.style.display = "none";
         }, 500);
