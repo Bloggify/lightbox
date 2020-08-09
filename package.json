@@ -1,6 +1,6 @@
 {
   "name": "bloggify-lightbox",
-  "version": "3.1.2",
+  "version": "3.1.3",
   "description": "MiniLightbox plugin for Bloggify sites",
   "main": "lib/index.js",
   "scripts": {
